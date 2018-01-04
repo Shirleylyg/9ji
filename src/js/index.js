@@ -15,13 +15,13 @@ require(['config'],function(){
         $('#loadmore').on('click',function(){
             qty++;
             if(qty>=2){
-                $('#loadmore').remove();
+                $('#loadmore').css('display','none');
             }
             var $xhr = $.get('./api/idxgoodslist.php',function(){
                 var res = JSON.parse($xhr.responseText);
                 // 当请求数据已经没有的时候，删除加载按钮
                 if(res === ''){
-                    $('#loadmore').remove();
+                    $('#loadmore').css('display','none');
                 }
                 var $ul = $('.goodCommodity ul');
                 $ul.append(res.map(function(item){
@@ -38,7 +38,50 @@ require(['config'],function(){
 
             })
         })
-  
+
+        // 点击出现购物车
+        $('.tool-cart').on('click',function(){
+            $('.tool-bar').animate({right:300}).find('.tool-bar-frame').show();
+        })
+        /*$(document).on('click',function(){
+            $('.tool-bar').animate({right:0}).find('.tool-bar-frame').hide()
+        })*/
+
+        // 楼梯
+        var $floors = $('.diy-floor');
+        var $floorsItem = $('.diy-elevator').find('a');
+        $(document).scroll(function(){
+            var scrollTop = $(window).scrollTop();
+
+            if(scrollTop > 800){
+                $('.diy-elevator').css('display','block');
+            }else{
+                $('.diy-elevator').css('display','none');
+            }
+
+            // 如何判断滚动到响应楼层
+            // 当滚动到相应的楼层时，楼梯"相应位置"显示高亮
+            $floors.each(function(idx,ele){
+
+                if(scrollTop >= $(ele).offset().top - $(ele).outerHeight()/2){
+                     $floorsItem.eq(idx).addClass('active').siblings('a').removeClass('active');
+                }
+            })
+        })
+        // 点击楼梯跳到对应楼层
+        $('.diy-elevator').on('click','a',function(){   
+            var targetScrollTop;
+            if($(this).hasClass('last')){
+                targetScrollTop = 0
+            }else{
+                var idx = $(this).index();
+
+                // 获取对应楼层所在的偏移量
+                targetScrollTop = $floors.eq(idx).offset().top;
+            }
+            $('html,body').stop().animate({'scrollTop':targetScrollTop},'slow');
+        })
+
     })  
 })
 

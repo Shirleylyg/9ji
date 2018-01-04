@@ -4,11 +4,7 @@ require(['config'],function(){
         // 点击切换
         $('#login').on('click','.login-tab li',function(){
             $(this).addClass('login-on').siblings().removeClass('login-on');
-            if($(this).hasClass('log1')){
-                $('.login-body .log1').show().next().hide();
-            }else if($(this).hasClass('log2')){
-                 $('.login-body .log2').show().prev().hide();
-            }
+            $('.login-style').eq($(this).index()).show().siblings().hide();
         })
         // 生成验证码
         function vCode(){
