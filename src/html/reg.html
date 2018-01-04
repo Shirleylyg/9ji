@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>注册页</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reg.css" />
+</head>
+<body style="background: #f6f6f6;">
+    <div class="wrapper">
+        <div class="log_head">
+            <h1 class="log_logo left"><a href="../index.html"></a></h1>
+        </div>
+        <div class="login_wrap" style="background: #fff;width: 960px;min-height: 400px;padding: 10px;padding-bottom: 20px;">
+            <div class="zhuce-tab">
+                <ul>
+                    <li class="xz reg1">快速注册</li>
+                    <li class="reg2">账号注册</li>
+                </ul>
+            </div>
+            <div class="regtip right">已有九机网账号？现在就<a href="login.html">登录</a></div>
+            <div class="xxknr">
+                <div class="reg reg1" style="display: block;">
+                    <dl>
+                        <dt><i>*</i>手机号码</dt>
+                        <dd>
+                            <input type="text" id="usermobile"><em>手机号码非常重要，找回密码及购物都会用到</em></dd>
+                    </dl>
+                    <dl id="codedl" style="display: block;">
+                        <dt><i>*</i>验证码</dt>
+                        <dd>
+                            <input type="text" id="yzmcode" style="width: 120px;"><span id="vcode"   style="display:inline-block;margin: 0 10px; width:80px;height:30px;vertical-align: middle;border:1px solid #ccc;text-align:center;"></span><a href="#" id="change">看不清楚？换一张</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>短信验证码</dt>
+                        <dd>
+                            <input type="text" id="phonecode" style="width: 120px;"><a class="btn" id="getCode" href="javascript:countDown();">
+                                <span id="dyMobileButton">获取短信验证码</span></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <input name="" id="mmprovision" type="checkbox" checked="checked" style="margin-right: 5px; vertical-align: middle;"><label for="mmprovision" style="color: #999;">我已认真阅读并同意<a href="#" target="_blank" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a></label></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <button id="regbut">提交注册</button></dd>
+                    </dl>
+                </div>
+                <div class="reg reg2" style="display: none;">
+                    <dl>
+                        <dt><i>*</i>用户名</dt>
+                        <dd>
+                            <input type="text" id="userUID"><em>4-16位字母、数字或汉字，请不要输入特殊字符！</em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>密码</dt>
+                        <dd>
+                            <input type="password" id="userpwd3"><em>6个字符以上的字母或数字</em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>重复密码</dt>
+                        <dd>
+                            <input type="password" id="userpwd4"><em>请重复输入密码确认不会输错</em></dd>
+                    </dl>
+
+                    <dl>
+                        <dt><i>*</i>手机号码</dt>
+                        <dd>
+                            <input type="text" id="usermobile2"><em>手机号码非常重要，找回密码及购物都会用到</em></dd>
+                    </dl>
+                    <dl>
+                        <dt>邮箱地址</dt>
+                        <dd>
+                            <input type="text" id="usermail"><em>请填写邮箱，用于找回密码</em></dd>
+                    </dl>
+                    <dl id="codedl2">
+                        <dt>验证码</dt>
+                        <dd>
+                            <input type="text" id="yzmcode2" style="width: 120px;"><span id="vcode2"   style="display:inline-block;margin: 0 10px;width:80px;height:30px;vertical-align: middle;border:1px solid #ccc;text-align:center;"></span><a href="#" id="change2">看不清楚？换一张</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>短信验证码</dt>
+                        <dd>
+                            <input type="text" id="phonecode2" style="width: 120px;"><a class="btn" id="getCode2" href="javascript:countDown2();">
+                                <span id="dyMobileButton2">获取短信验证码</span></a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <input name="" id="mmprovision2" type="checkbox" checked="checked" style="margin-right: 5px; vertical-align: middle;"><label for="mmprovision" style="color: #999;">我已认真阅读并同意<a href="javascript:;" class="showyhzt" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a></label></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <button id="regbut2">提交注册</button></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="bottom">
+        <div class="wrapper">
+            <div class="foot_nav">
+                <a href="#" rel="nofollow">常见问题</a><i>|</i><a  rel="nofollow">供应商申请</a><i>|</i><a  rel="nofollow">在线支付</a><i>|</i><a  rel="nofollow">配送方式</a><i>|</i><a  rel="nofollow">招聘信息</a><i>|</i><a >九机评测</a><i>|</i><a >品牌专区</a><i>|</i><a  rel="nofollow">关于我们</a><i>|</i><a  rel="nofollow">联系我们</a><i>|</i><a >网站地图</a><i>|</i><a >地区报价</a><i>|</i><a >加盟招商</a><i>|</i><a>IT服务</a>
+            </div>
+            <div class="copy">
+                
+                <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+                
+                <p>网站ICP备案号：<a rel="nofollow"  target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" target="_blank">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+                
+                <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+                <p>云南九机信息技术有限公司版权所有</p>
+            </div>
+            <div class="bot-link">
+                <a class="wangjian"  target="_blank" style="background:#fff" title="中国互联网违法和不良信息举报中心"><img src="../css/img/botpic1c.jpg"></a>
+                <a id="_pingansec_bottomimagelarge_shiming" ><img src="../css/img/bottom_large_img.png"></a>
+                
+                <a class="shiming" style="background:none;" key="57479c9defbfb00a58d582f4" logo_size="124x47" logo_type="realname"  target="_blank"><b id="aqLogoVGQTR" style="display: none;"></b><img src="../css/img/sm_124x47.png" alt="安全联盟认证" width="124" height="47" style="border: none;"></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/require.js" data-main ="../js/reg"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>登录页</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/reg.css" />
+</head>
+<body style="background: #f6f6f6">
+    <!-- 头部 -->
+    <div class="wrapper" id="login_head">
+        <div class="log_head">
+            <h1 class="log_logo left"><a href="../index.html"><span>欢迎登录</span></a></h1>
+        </div>
+    </div>
+    <!-- 登录 -->
+    <div class="login_wrap" style="background:#fff url('../css/img/reg-bg.png') no-repeat; background-size:cover;background-position:center;padding: 40px 0;">  
+        <div class="wrapper" id="login_body" style="width:;">
+            <div class="log_ad" style="display:">   
+                <a href="#"></a>     
+            </div>
+            <div class="login_border" style="padding:8px;">
+                <!--普通登录-->
+                <div class="login" id="login" style="display: block;">
+                    <div style="position:absolute; right:30px; top:14px;"><a href="reg.html" target="_blank">账号注册<em style="width:16px; height:16px; background:#999; float:right; color:#fff; border-radius:100%; text-align:center; line-height:16px; margin:1px 0 0 5px; font-family:&#39;宋体&#39;; font-weight:bold;">&gt;</em></a></div>
+                    <ul class="login-tab">                     
+                        <li class="login-on log1">普通登录</li>
+                        <li class="log2">手机登录</li>
+                    </ul>
+                    <div class="login-body">
+                         <div class="login-style log1" style="display: block;">
+                            <dl>
+                                <dd><input name="txtUser" type="text" id="txtUser" placeholder="用户名/邮箱/手机号"></dd>
+                            </dl>
+                            <dl>
+                                <dd><input type="password" id="Userpwd"  placeholder="请输入您的密码"></dd>
+                            </dl>
+                            <dl id="logincode" style="display: none;">
+                                <dd><input type="text" id="txtCode" name="txtCode" style="width: 133px; margin-right: 10px;" placeholder="验证码"><img id="vCodeImg" src="" width="90" height="34" title="点击换一个" style="vertical-align: middle; margin-top: -4px;"  ></dd>
+                            </dl>
+                            <div class="psword" style="margin-top:15px;"><a href="#" tabindex="-1" class="right" target="_blank">忘记密码?</a></div>
+                            
+                            <div class="remember">
+                                <input type="checkbox" id="issave" checked=""><label for="issave">下次自动登录</label>
+                            </div>
+                            
+                            
+                            <div class="tishi"></div>
+                            <button   id="logbtn" style="outline:none">登 录</button>
+                        </div>
+                        <div class="login-style log2">
+                            <dl>
+                                <dd><input name="phone" type="text" id="phone" placeholder="您的手机号码"></dd>
+                            </dl>
+                            <dl id="yz-code" style="">
+                                <dd><input type="text" id="txtCode2" name="txtCode2" style="width: 133px; margin-right: 10px;" placeholder="验证码"><span id="vcode" style="display:inline-block;width:70px;height:34px;vertical-align: middle;text-align: center;border-top: 5px;border:1px solid #ddd;"  ></span></dd>
+                            </dl>
+                            <dl>
+                                <dd><input type="text" id="dynamicPWD" onkeydown="enterHandler(event)" style="width: 133px;" placeholder="短信验证码"><input type="button" id="btn" class="btn_mfyzm" value="获取动态密码"  ></dd>
+                            </dl>
+                            
+                            <div class="remember">
+                                <input type="checkbox" id="issave1" checked=""><label for="issave1">下次自动登录</label>
+                            </div>
+                            
+                            <div class="tishi"></div>
+                            <button type="button" id="dynamicLogon" style="outline:none">登 录</button>
+                        </div>
+                    </div>
+
+                    <div class="hezuo">
+                        <h3>使用合作网站的账号登录：</h3>
+                        <p>
+                            <a href="" ><i class="wx"></i>微信</a>
+                            <a href="" ><i class="qq"></i>QQ号</a>
+                        </p>
+                    </div>
+                    <div class="qiehuan"></div>
+                    <div id="zhishi" style="position:absolute; right:-185px; bottom:0; cursor:pointer;"><img src="../img/zhishi2.png"></div>
+                </div>
+
+                <!--APP扫码登录-->
+                <div class="login" style="display: none;">
+                    <i class="qiehuan" style="background-position:left bottom;"></i>
+                    <div class="app_login">
+                        <h1><i>-</i>登录失败，请刷新二维码后重试！</h1>
+                        <h2>使用九机APP&nbsp;&nbsp;扫码安全登录</h2>
+                    </div>
+                    <div class="app_code">
+                        <img id="appLoginCode" src="">
+                    </div>
+                    <div class="shuaxin">
+                        <span>刷新二维码</span>
+                        <p><a href="#" target="_blank">查看使用帮助</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- 微信扫码 -->
+    <div class="wxlogma">
+        <a class="close"  ></a>
+        <h3>微信扫一扫二维码登录</h3>
+        <iframe width="200" height="200" scrolling="no" frameborder="0" id="weixinCode" src=""></iframe>
+    </div>
+    <!-- 尾部 -->
+    <div class="bottom">
+        <div class="wrapper">
+            <div class="foot_nav">
+                <a href="#" rel="nofollow">常见问题</a><i>|</i><a  rel="nofollow">供应商申请</a><i>|</i><a  rel="nofollow">在线支付</a><i>|</i><a  rel="nofollow">配送方式</a><i>|</i><a  rel="nofollow">招聘信息</a><i>|</i><a >九机评测</a><i>|</i><a >品牌专区</a><i>|</i><a  rel="nofollow">关于我们</a><i>|</i><a  rel="nofollow">联系我们</a><i>|</i><a >网站地图</a><i>|</i><a >地区报价</a><i>|</i><a >加盟招商</a><i>|</i><a>IT服务</a>
+            </div>
+            <div class="copy">
+                
+                <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：400-008-3939 &nbsp;&nbsp;0871-68393939 &nbsp;&nbsp;&nbsp;&nbsp; 工作时间：周一至周日 09:00-21:30</p>
+                
+                <p>网站ICP备案号：<a rel="nofollow"  target="_blank">滇ICP备06002001号</a> &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20110012号 &nbsp;&nbsp;&nbsp;&nbsp; <a rel="nofollow" target="_blank">滇公网安备 53010202000261号</a> &nbsp;&nbsp;&nbsp;&nbsp; </p>
+                
+                <p>Copyright © 2006 - 2018 九机网 All Rights Reserved</p>
+                <p>云南九机信息技术有限公司版权所有</p>
+            </div>
+            <div class="bot-link">
+                <a class="wangjian"  target="_blank" style="background:#fff" title="中国互联网违法和不良信息举报中心"><img src="../css/img/botpic1c.jpg"></a>
+                <a id="_pingansec_bottomimagelarge_shiming" ><img src="../css/img/bottom_large_img.png"></a>
+                
+                <a class="shiming" style="background:none;" key="57479c9defbfb00a58d582f4" logo_size="124x47" logo_type="realname"  target="_blank"><b id="aqLogoVGQTR" style="display: none;"></b><img src="../css/img/sm_124x47.png" alt="安全联盟认证" width="124" height="47" style="border: none;"></a>
+                <a class="wangjian"  target="_blank" title="云南网监电子标识" alt="云南网监电子标识" ><img src="../css/img/wangjian.png" alt="安全联盟认证" width="124" height="47" style="border: none;"></a>
+                <a class="wangjing" target="_blank"><img src="../css/img/wangjing.png" alt="安全联盟认证" width="124" height="47" style="border: none;"></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/require.js" data-main ="../js/login"></script>
+</body>
+</html>
