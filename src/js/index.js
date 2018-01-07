@@ -1,12 +1,16 @@
 // 设置别名
 
 require(['config'],function(){
-      require(['jquery','slide'],function($,sli){
+      require(['jquery','slide','common'],function($,sli,com){
 
         // 轮播图
         $('.ck-slide').ckSlide({
             autoPlay: true
         });
+
+        // 购物车
+        com.cartCookie();
+        com.toolCart();
 
 
         // 底部“加载更多好货”点击加载更多
@@ -39,13 +43,6 @@ require(['config'],function(){
             })
         })
 
-        // 点击出现购物车
-        $('.tool-cart').on('click',function(){
-            $('.tool-bar').animate({right:300}).find('.tool-bar-frame').show();
-        })
-        /*$(document).on('click',function(){
-            $('.tool-bar').animate({right:0}).find('.tool-bar-frame').hide()
-        })*/
 
         // 楼梯
         var $floors = $('.diy-floor');

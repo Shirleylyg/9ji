@@ -3297,7 +3297,8 @@
             </div>
         </div>
     </div>
-    <div class="tool-bar" style="opacity: 1;z-index:1000;">
+    <!-- 侧边工具栏 -->
+    <div class="tool-bar" style="opacity: 1;z-index:100000;">
         <div class="tool-bar-menu">
             <a href="#"  class="tool-cart" ><i class="icon"></i><span>购物车<em></em></span><b>0</b></a>
             
@@ -3310,8 +3311,31 @@
             <a href="#"  class="tool-vs"  style="color:#fff;"><i class="icon"></i><span>产品对比<em></em></span></a>
         </div>
         <a href="#"  class="scroll-to-top" style="display: block;"><i class="icon"></i><span>回到顶部<em></em></span></a>
-        <div class="tool-bar-frame hide"><p style="text-align:center;margin-top:200px;">loading...</p></div>
-    </div>
+        <div class="tool-bar-frame hide" >
+            <div class="cart-box relative">
+                <div class="cart-mini-title tool-cart" style="height:60px;font-size:30px;"><i class="icon"></i>购物车</div>
+                <div class="cart-product-box relative "style="width:280px;height: 480px;">
+                    <div class="product">
+                        <ul>
+                            <!-- <li style="height:80px;">
+                                <img src="../img/20170913034230383.jpg" style="float: left;width: 62px;height: 62px;">
+                                <div style="float:right;">
+                                    <p >iPhone X（A1865）国行版 银色 64GB </p>
+                                    <p class="orange">￥7680.00</p>
+                                    <p><span>-</span><input type="text" value="1" disabled><span>+</span></p>
+                                </div>  
+                            </li> -->
+
+                        </ul>
+                   </div>
+                </div>
+                <div class="cart-mini-total" style="position:absolute;border-top: 1px solid #ddd;width: 100%;height: 80px;text-align: center;">
+                    <p>共0件商品，总计：<b class="orange">￥00.00</b></p>
+                    <a href="car.html" class="button button-orange button-block" style="width:100px;height:30px;padding-top:5px;font-size:15px;">去结算</a>
+                </div>
+            </div>
+        </div>
+    </div> 
     <!--友情链接-->
     <div class="friend_link">
         <dl class="wrapper">

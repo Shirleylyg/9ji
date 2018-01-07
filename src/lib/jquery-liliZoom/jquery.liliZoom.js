@@ -2,7 +2,7 @@
 * @Author: ShirleyLu
 * @Date:   2017-12-28 16:57:00
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-12-28 20:49:22
+* @Last Modified time: 2018-01-06 17:54:25
 */
 ;(function($){
     // 给jq原型添加方法
@@ -17,7 +17,6 @@
             // 大图小图之间的距离
             gap: 10
         }
-
         // 遍历作用与当前元素
         return this.each(function(){
             // 变量接收实例,this是节点，用jq对象操作比较方便
@@ -66,8 +65,10 @@
                     // 绑定事件，鼠标移入小图容器，放大镜出现，大图容器出现，大图出现
                     $small.on('mouseenter',function(){
                         zoom.show();
-                    }.bind(this)).on('mouseleaver',function(){
-                        // zoom.hide();
+                    }.bind(this));
+                    $small.on('mouseleave',function(){
+                        // console.log(111)
+                        zoom.hide();
                     }.bind(this)).on('mousemove',function(e){
                         // console.log(this)
                         // 鼠标移动放大镜移动,要获取鼠标位置,要除去一些偏差，浏览器边框和滚动条
@@ -95,8 +96,8 @@
                 // 隐藏图片
                 hide(){
                     // 鼠标移开删除放大镜和大图
-                    this.$smallZoom.remove();
-                    this.$big.remove();
+                    this.$smallZoom.hide();
+                    this.$big.hide();
                 },
                 // 当鼠标移动的时候放大镜和大图移动
                 move(x,y){

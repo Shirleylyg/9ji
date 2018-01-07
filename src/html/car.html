@@ -25,7 +25,7 @@
                 <a href="#"  class="top-app"><i class="icon"></i>客户端</a>
                 
                     
-                    <a href="#"  onclick="Jiuji.chat(&#39;show&#39;)">在线客服</a>
+                    <a href="#"  >在线客服</a>
                 
                 <a href="#"  class="top-sitemap">网站导航<i class="triangle-down"></i></a>
                 <a href="#"  target="_blank" title="不良信息举报通道" class="unhealthy-info"><i class="icon" style="background:url(/Static/images/jubao.png) no-repeat center top; background-size:15px;"></i>不良信息举报</a>
@@ -107,7 +107,7 @@
             </dl>
             <div class="top-free-phone">
                 <p>输入手机号码并<span class="green">免费</span>拨打：</p>
-                <input type="text" id="J-free-phone-num"><button onclick="freePhone()">拨打</button>
+                <input type="text" id="J-free-phone-num"><button >拨打</button>
             </div>
         </div>
     </div>
@@ -122,11 +122,39 @@
             </div>
         </div>
         <div class="cart-box">
-            <div class="cart-nothing">
-                <img src="">
-                <p>购物车里还没有商品，快 <a href="list.html"  class="orange" target="_parent">去逛逛</a> 吧</p>
+            <div class="cart-tab">
+                <div class="left"><a href="javascript:;" class="cur">全部商品 <span class="orange"></span></a></div>
             </div>
+            
+            <div class="cart-item cart-title">
+                <div class="cart-product-box">
+                    <div class="product">商品</div>
+                    <div class="unit-price">单价（元）</div>
+                    <div class="discount">优惠（元）</div>
+                    <div class="count">数量</div>
+                    <div class="sum">小计（元）</div>
+                    <div class="action">操作</div>
+                </div>
             </div>
+             
+             <!-- 商品信息 -->
+
+            
+            <div class="cart-total">
+                <div class="left margin-left">
+                    <!-- <label class="checkbox radio-box"><input type="checkbox" checked="" >全选</label> -->
+                    <a href="#">删除</a>
+                    <a href="#">移入收藏夹</a>
+                </div>
+                <div class="right">
+                    <span>已选商品 <b class="orange large-font">0</b> 件</span>
+                    <span>总计（不含运费）：<b class="orange title-font">￥0</b></span>
+                    <button class="button" id="goConfirm" >结 算</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
     </div>
 
     <div class="cart-guess-box wrapper">
@@ -138,125 +166,125 @@
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="萌宠个性保温杯" title="萌宠个性保温杯" src="../img/20161125165242643.jpg"></a>
                                 <h4 class="normal"><a title="43547" href="#" >萌宠个性保温杯</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="43547">￥29.00</b></p>
-                                <button onclick="Jiuji.addCart(43547,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                     
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="东芝（TOSHIBA） 16GB Class10 48MB/s TF（Micro SD）存储卡" title="东芝（TOSHIBA） 16GB Class10 48MB/s TF（Micro SD）存储卡" src="../img/20160622101454633.jpg"></a>
                                 <h4 class="normal"><a title="22189" href="#" >东芝（TOSHIBA） 16GB Class10 48MB/s TF（Micro SD）存储卡</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="22189">￥35.00</b></p>
-                                <button onclick="Jiuji.addCart(22189,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="小米（MI）小米手环 智能手环  运动计步 记录睡眠状态 震动叫醒 来电提醒" title="小米（MI）小米手环 智能手环  运动计步 记录睡眠状态 震动叫醒 来电提醒" src="../img/20160930111359123.jpg"></a>
                                 <h4 class="normal"><a title="23772" href="#" >小米（MI）小米手环 智能手环  运动计步 记录睡眠状态 震动叫醒 来电提醒</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="23772">￥69.00</b></p>
-                                <button onclick="Jiuji.addCart(23772,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="格律USB充电打火机 防风无明火 滑盖点火" title="格律USB充电打火机 防风无明火 滑盖点火" src="../img/20170928154327232.jpg"></a>
                                 <h4 class="normal"><a title="29872" href="#" >格律USB充电打火机 防风无明火 滑盖点火</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="29872">￥49.00</b></p>
-                                <button onclick="Jiuji.addCart(29872,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="品胜（PISEN）USB灭蚊器 家用户外办公室车载便携式静音电热蚊香器" title="品胜（PISEN）USB灭蚊器 家用户外办公室车载便携式静音电热蚊香器" src="../img/20170918182241393.jpg"></a>
                                 <h4 class="normal"><a title="30727" href="#" >品胜（PISEN）USB灭蚊器 家用户外办公室车载便携式静音电热蚊香器</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="30727">￥25.00</b></p>
-                                <button onclick="Jiuji.addCart(30727,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="小米（MI）小米手环光感版 智能手环 心率手环 智能防水运动手环腕带计步器 监测睡眠来电提醒 光感版手环" title="小米（MI）小米手环光感版 智能手环 心率手环 智能防水运动手环腕带计步器 监测睡眠来电提醒 光感版手环" src="../img/20170523171951337.jpg"></a>
                                 <h4 class="normal"><a title="36681" href="#" >小米（MI）小米手环光感版 智能手环 心率手环 智能防水运动手环腕带计步器 监测睡眠来电提醒 光感版手环</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="36681">￥89.00</b></p>
-                                <button onclick="Jiuji.addCart(36681,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="幻响（i-mu）D2 LED阅读床头护眼台灯" title="幻响（i-mu）D2 LED阅读床头护眼台灯" src="../img/20160412092857892.jpg"></a>
                                 <h4 class="normal"><a title="38996" href="#" >幻响（i-mu）D2 LED阅读床头护眼台灯</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="38996">￥69.00</b></p>
-                                <button onclick="Jiuji.addCart(38996,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="美致（MZ）遥控爬墙车 一键变形遥控车玩具汽车 充电机器人 特技车吸力电动玩具车" title="美致（MZ）遥控爬墙车 一键变形遥控车玩具汽车 充电机器人 特技车吸力电动玩具车" src="../img/20160922095627816.jpg"></a>
                                 <h4 class="normal"><a title="41786" href="#" >美致（MZ）遥控爬墙车 一键变形遥控车玩具汽车 充电机器人 特技车吸力电动玩具车</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="41786">￥148.00</b></p>
-                                <button onclick="Jiuji.addCart(41786,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="小米（MI）随身Mini蓝牙音箱 迷你无线蓝牙便携音响" title="小米（MI）随身Mini蓝牙音箱 迷你无线蓝牙便携音响" src="../img/20171115164804619.jpg"></a>
                                 <h4 class="normal"><a title="42379" href="#" >小米（MI）随身Mini蓝牙音箱 迷你无线蓝牙便携音响</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="42379">￥69.00</b></p>
-                                <button onclick="Jiuji.addCart(42379,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="沃丁（WoDinG）L7 智能灯蓝牙音响 便携炫彩灯 迷你收音机音响" title="沃丁（WoDinG）L7 智能灯蓝牙音响 便携炫彩灯 迷你收音机音响" src="../img/20170912154236355.jpg"></a>
                                 <h4 class="normal"><a title="42789" href="#" >沃丁（WoDinG）L7 智能灯蓝牙音响 便携炫彩灯 迷你收音机音响</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="42789">￥169.00</b></p>
-                                <button onclick="Jiuji.addCart(42789,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="JBL GO 音乐金砖 无线蓝牙便携音箱 户外小音箱" title="JBL GO 音乐金砖 无线蓝牙便携音箱 户外小音箱" src="../img/20170928114609356.jpg"></a>
                                 <h4 class="normal"><a title="42986" href="#" >JBL GO 音乐金砖 无线蓝牙便携音箱 户外小音箱</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="42986">￥245.00</b></p>
-                                <button onclick="Jiuji.addCart(42986,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="欧雷特（OVEVO）音乐双耳运动蓝牙耳机     通用版无线立体声跑步耳机防汗耳机" title="欧雷特（OVEVO）音乐双耳运动蓝牙耳机     通用版无线立体声跑步耳机防汗耳机" src="../img/20170912115216327.jpg"></a>
                                 <h4 class="normal"><a title="43427" href="#" >欧雷特（OVEVO）音乐双耳运动蓝牙耳机     通用版无线立体声跑步耳机防汗耳机</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="43427">￥125.00</b></p>
-                                <button onclick="Jiuji.addCart(43427,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="欧雷特（OVEVO）Q10 车充蓝牙耳机 耳塞式 无线迷你 双USB接口车充蓝牙耳机二合一 开车必备" title="欧雷特（OVEVO）Q10 车充蓝牙耳机 耳塞式 无线迷你 双USB接口车充蓝牙耳机二合一 开车必备" src="../img/20171024154318431.jpg"></a>
                                 <h4 class="normal"><a title="43443" href="#" >欧雷特（OVEVO）Q10 车充蓝牙耳机 耳塞式 无线迷你 双USB接口车充蓝牙耳机二合一 开车必备</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="43443">￥189.00</b></p>
-                                <button onclick="Jiuji.addCart(43443,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                             <li style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="萌宠个性保温杯" title="萌宠个性保温杯" src="../img/20161125165242643.jpg"></a>
                                 <h4 class="normal"><a title="43547" href="#" >萌宠个性保温杯</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="43547">￥29.00</b></p>
-                                <button onclick="Jiuji.addCart(43547,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li>
                         
                 <li class="clone" style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="东芝（TOSHIBA） 16GB Class10 48MB/s TF（Micro SD）存储卡" title="东芝（TOSHIBA） 16GB Class10 48MB/s TF（Micro SD）存储卡" src="../img/20160622101454633.jpg"></a>
                                 <h4 class="normal"><a title="22189" href="#" >东芝（TOSHIBA） 16GB Class10 48MB/s TF（Micro SD）存储卡</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="22189">￥35.00</b></p>
-                                <button onclick="Jiuji.addCart(22189,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li><li class="clone" style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="小米（MI）小米手环 智能手环  运动计步 记录睡眠状态 震动叫醒 来电提醒" title="小米（MI）小米手环 智能手环  运动计步 记录睡眠状态 震动叫醒 来电提醒" src="../img/20160930111359123.jpg"></a>
                                 <h4 class="normal"><a title="23772" href="#" >小米（MI）小米手环 智能手环  运动计步 记录睡眠状态 震动叫醒 来电提醒</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="23772">￥69.00</b></p>
-                                <button onclick="Jiuji.addCart(23772,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li><li class="clone" style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="格律USB充电打火机 防风无明火 滑盖点火" title="格律USB充电打火机 防风无明火 滑盖点火" src="../img/20170928154327232.jpg"></a>
                                 <h4 class="normal"><a title="29872" href="#" >格律USB充电打火机 防风无明火 滑盖点火</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="29872">￥49.00</b></p>
-                                <button onclick="Jiuji.addCart(29872,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li><li class="clone" style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="品胜（PISEN）USB灭蚊器 家用户外办公室车载便携式静音电热蚊香器" title="品胜（PISEN）USB灭蚊器 家用户外办公室车载便携式静音电热蚊香器" src="../img/20170918182241393.jpg"></a>
                                 <h4 class="normal"><a title="30727" href="#" >品胜（PISEN）USB灭蚊器 家用户外办公室车载便携式静音电热蚊香器</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="30727">￥25.00</b></p>
-                                <button onclick="Jiuji.addCart(30727,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li><li class="clone" style="float: left; width: 208px;">
                                 <a href="#"  target="_blank"><img width="160" height="160" alt="小米（MI）小米手环光感版 智能手环 心率手环 智能防水运动手环腕带计步器 监测睡眠来电提醒 光感版手环" title="小米（MI）小米手环光感版 智能手环 心率手环 智能防水运动手环腕带计步器 监测睡眠来电提醒 光感版手环" src="../img/20170523171951337.jpg"></a>
                                 <h4 class="normal"><a title="36681" href="#" >小米（MI）小米手环光感版 智能手环 心率手环 智能防水运动手环腕带计步器 监测睡眠来电提醒 光感版手环</a></h4>
                                 <p>九机价：<b class="nowPrice red" ppid="36681">￥89.00</b></p>
-                                <button onclick="Jiuji.addCart(36681,randerHtml)" class="button button-orange">加入购物车</button>
+                                <button  class="button button-orange">加入购物车</button>
                             </li></ul></div>
             </div>
             <a href="#"  class="guess-next left">&gt;</a>
@@ -287,5 +315,6 @@
             </div>
         </div>
     </div>
+        <script type="text/javascript" src="../js/require.js" data-main="../js/car"></script> 
 </body>
 </html>

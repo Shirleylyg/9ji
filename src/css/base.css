@@ -233,12 +233,12 @@ legend {
 }
 
 .light-purple-bg {
-    background-color: #b394f3
+    background-color: #b394f3;
 }
 
 .wrapper {
     width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .close {
