@@ -15,33 +15,35 @@
             <div class="zhuce-tab">
                 <ul>
                     <li class="xz">快速注册</li>
-                    <li>账号注册</li>
+                    <!-- <li>账号注册</li> -->
                 </ul>
             </div>
             <div class="regtip right">已有九机网账号？现在就<a href="login.html">登录</a></div>
             <div class="xxknr">
                 <div class="reg" style="display: block;">
                     <dl>
-                        <dt><i>*</i>手机号码</dt>
+                        <dt><i>*</i>用户名</dt>
                         <dd>
-                            <input type="text" id="usermobile"><em>手机号码非常重要，找回密码及购物都会用到</em></dd>
+                            <input type="text" id="username">
+                            <!-- <em>手机号码非常重要，找回密码及购物都会用到</em> -->
+                            </dd>
+                    </dl>
+                     <dl>
+                        <dt><i>*</i>密码</dt>
+                        <dd>
+                            <input type="password" id="password">
+                        </dd>
                     </dl>
                     <dl id="codedl" style="display: block;">
                         <dt><i>*</i>验证码</dt>
                         <dd>
-                            <input type="text" id="yzmcode" style="width: 120px;"><span id="vcode"   style="display:inline-block;margin: 0 10px; width:80px;height:30px;vertical-align: middle;border:1px solid #ccc;text-align:center;"></span><a href="#" id="change">看不清楚？换一张</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><i>*</i>短信验证码</dt>
-                        <dd>
-                            <input type="text" id="phonecode" style="width: 120px;"><a class="btn" id="getCode" href="javascript:countDown();">
-                                <span id="dyMobileButton">获取短信验证码</span></a>
-                        </dd>
+                            <input type="text" id="yzmcode" style="width: 120px;"><br /><span id="vcode"   style="display:inline-block;margin: 0 10px; width:80px;height:30px;vertical-align: middle;border:1px solid #ccc;text-align:center;"></span><a href="#" id="change">看不清楚？换一张</a></dd>
                     </dl>
                     <dl>
                         <dt></dt>
                         <dd>
-                            <input name="" id="mmprovision" type="checkbox" checked="checked" style="margin-right: 5px; vertical-align: middle;"><label for="mmprovision" style="color: #999;">我已认真阅读并同意<a href="#" target="_blank" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a></label></dd>
+                            <input name="" id="mmprovision" type="checkbox" checked style="margin-right: 5px; vertical-align: middle;"><label for="mmprovision" style="color: #999;">我已认真阅读并同意<a  target="_blank" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a></label>
+                        </dd>
                     </dl>
                     <dl>
                         <dt></dt>
@@ -49,7 +51,7 @@
                             <button id="regbut">提交注册</button></dd>
                     </dl>
                 </div>
-                <div class="reg" style="display: none;">
+                <!-- <div class="reg" style="display: none;">
                     <dl>
                         <dt><i>*</i>用户名</dt>
                         <dd>
@@ -65,7 +67,7 @@
                         <dd>
                             <input type="password" id="userpwd4"><em>请重复输入密码确认不会输错</em></dd>
                     </dl>
-
+                
                     <dl>
                         <dt><i>*</i>手机号码</dt>
                         <dd>
@@ -82,13 +84,6 @@
                             <input type="text" id="yzmcode2" style="width: 120px;"><span id="vcode2"   style="display:inline-block;margin: 0 10px;width:80px;height:30px;vertical-align: middle;border:1px solid #ccc;text-align:center;"></span><a href="#" id="change2">看不清楚？换一张</a></dd>
                     </dl>
                     <dl>
-                        <dt><i>*</i>短信验证码</dt>
-                        <dd>
-                            <input type="text" id="phonecode2" style="width: 120px;"><a class="btn" id="getCode2" href="javascript:countDown2();">
-                                <span id="dyMobileButton2">获取短信验证码</span></a>
-                        </dd>
-                    </dl>
-                    <dl>
                         <dt></dt>
                         <dd>
                             <input name="" id="mmprovision2" type="checkbox" checked="checked" style="margin-right: 5px; vertical-align: middle;"><label for="mmprovision" style="color: #999;">我已认真阅读并同意<a href="javascript:;" class="showyhzt" style="color: #39f; margin: 0 5px;">《九机网用户协议》</a></label></dd>
@@ -98,7 +93,7 @@
                         <dd>
                             <button id="regbut2">提交注册</button></dd>
                     </dl>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
