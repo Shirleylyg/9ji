@@ -6,9 +6,11 @@ require(['config'],function(){
         // 更新用户登录信息
         var _username = location.search.slice(1);
         _username = _username.split('=')[1];
-        console.log(_username)
-        $('#userInfo a').remove();
-        $('</p>').html(`用户：${_username}`).appendTo('#userInfo');
+        if(_username){
+            $('#userInfo a').remove();
+            $('</p>').html(`用户：${_username}`).appendTo('#userInfo');
+        }
+       
 
         // 轮播图
         $('.ck-slide').ckSlide({

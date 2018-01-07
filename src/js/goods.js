@@ -13,7 +13,9 @@ require(['config'],function(){
                 id:_id
             },
             success:function(res){
+
                 res = JSON.parse(res);
+                
                 $('.d_h2').html(res[0].name);
                 $('#spprice').html(res[0].price);
                 $('.lowprice dd a:nth-child(1)').html('一手优品：￥'+(res[0].price-200));

@@ -1,3 +1,95 @@
+.box {
+  width: 310px;
+  margin: 100px auto;
+}
+.tb-pic {
+  a {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    *display: block;
+    *font-family: Arial;
+    *line-height: 1;
+    img {
+      vertical-align: middle;
+    }
+  }
+}
+.tb-thumb {
+  margin: 10px 0 0;
+  overflow: hidden;
+  li {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    height: 42px;
+    margin: 0 6px 0 0;
+    overflow: hidden;
+    padding: 1px;
+    div {
+      border: 1px solid #cdcdcd;
+    }
+  }
+  .tb-selected {
+    background: none repeat scroll 0 0 #c30008;
+    height: 40px;
+    padding: 2px;
+    div {
+      background-color: #ffffff;
+      border: medium none;
+    }
+  }
+}
+.tb-s310, .tb-s310 a {
+  height: 310px;
+  width: 310px;
+}
+.tb-s310, .tb-s310 img {
+  max-height: 310px;
+  max-width: 310px;
+}
+.tb-s310 {
+  a {
+    *font-size: 271px;
+  }
+}
+.tb-s40 {
+  a {
+    *font-size: 35px;
+  }
+}
+.tb-s40, .tb-s40 a {
+  height: 40px;
+  width: 40px;
+}
+.tb-booth {
+  border: 1px solid #cdcdcd;
+  position: relative;
+  z-index: 1;
+}
+div {
+  &.zoomDiv {
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    display: none;
+    text-align: center;
+    overflow: hidden;
+  }
+  &.zoomMask {
+    position: absolute;
+    background: url("images/mask.png") repeat scroll 0 0 transparent;
+    cursor: move;
+    z-index: 1;
+  }
+}
+body {
+  overflow-x: hidden;
+}
 .xianhuo_section {
   color: #666;
   float: left;
@@ -75,7 +167,7 @@
   width: 100%;
   font-size: 14px;
 }
-/*åŒç±»æŽ¨è*/
+/*0Š20‚60“30Š4¡À0†30Š30—5¡§¨¨0‚30‚6*/
 .tuij-title {
   font-family: 'Microsoft YaHei',SimHei;
   font-size: 14px;
@@ -664,7 +756,7 @@
     overflow: hidden;
   }
 }
-/*é¢œè‰²ä»·æ ¼é¼ æ ‡ç§»å…¥æ˜¾ç¤º*/
+/*¨¦0„40“4¨¨¡ë0…50Š10†3¡¤0Š30„20†4¨¦0†40„20Š30„26¦00Š4¡ì0†30Š2¡­0„60Š30¹00†60Š4¡è0†2*/
 .zoomMask {
   z-index: 97 !important;
   position: absolute;
@@ -702,7 +794,7 @@
     }
   }
 }
-/*çŒœä½ å–œæ¬¢*/
+/*0Š40“30“40Š10†50„20Š2¨C0“40Š30…10„4*/
 .tab_details .tabt3, .tab_details .tab_bt {
   height: 40px;
   background: #f6f6f6;
@@ -917,7 +1009,7 @@
     margin-right: 8px;
   }
 }
-/*å¯¹æ¯”*/
+/*0Š20…40†10Š30…4¡±*/
 .duibibox {
   border: solid 1px #ccc;
   border-top: solid 3px #ff5a00;
@@ -1009,8 +1101,8 @@
     margin-bottom: 10px;
   }
 }
-/***************************å•†å“è¯¦æƒ…é¡µ********************************/
-/*å•†å“å›¾*/
+/***************************0Š26¦16¥90Š2¡°01¨¨0…40„70Š30™6¡­¨¦0„3********************************/
+/*0Š26¦16¥90Š2¡°010Š26§9*/
 .big_pic_show {
   float: left;
   width: 440px;
@@ -1026,6 +1118,7 @@
   margin-bottom: 5px;
   overflow: hidden;
   text-align: center;
+  position: relative;
   a {
     display: block;
   }
@@ -1095,7 +1188,7 @@
   display: block;
   background-image: url(/images/detail_icon.png?v=2);
 }
-/*æ”¾å¤§é•œ*/
+/*0Š3¡±0†60Š2¡è¡ì¨¦6¦1*/
 .zoomDiv {
   z-index: 999;
   position: absolute;
@@ -1107,7 +1200,7 @@
   text-align: center;
   overflow: hidden;
 }
-/*360åº¦æŸ¥çœ‹*/
+/*3600Š20†20„70Š30—00„60Š40“4*/
 #bigPic360 {
   position: relative;
   width: 440px;
@@ -1194,7 +1287,7 @@
     }
   }
 }
-/*å¼€ç®±åŠ¨ç”»*/
+/*0Š20†40Š40…3¡À0Š20”7¡§0Š4¡±*/
 .processbar_box {
   width: 250px;
   padding-top: 10px;
@@ -1251,7 +1344,7 @@
   top: -5px;
   z-index: 9;
 }
-/*çœŸæœºå›¾ç‰‡*/
+/*0Š40“40—00Š30“40†20Š26§90†60Š4¡ë6¦0*/
 #ProImage {
   width: 740px;
   height: 651px;
@@ -1377,7 +1470,7 @@
   width: 120px;
   height: 120px;
 }
-/*æ‰‹æœºè¯¦ç»†é¡µé“¾äºŒç»´*/
+/*0Š3¡ë6§80Š30“40†2¨¨0…40„70Š40†36¥9¨¦0„30…8¨¦¡°0†60Š10†20“30Š40†30…7*/
 .shareEwm {
   float: left;
   position: relative;
@@ -1456,7 +1549,7 @@
 iframe[name='google_conversion_frame'] {
   display: none;
 }
-/*å‘é€å•†å“ä¿¡æ¯åˆ°æ‰‹æœº*/
+/*0Š20‚5¡®¨¦010Š26¦16¥90Š2¡°010Š10†70„30Š3010…40Š20·3¡ã0Š3¡ë6§80Š30“40†2*/
 .senddetail {
   background: #fff;
   box-shadow: 0 0 10px #888;
@@ -1586,7 +1679,7 @@ iframe[name='google_conversion_frame'] {
   text-align: center;
   display: inline-block;
 }
-/*åˆ†äº«*/
+/*0Š20·36¥90Š10†20…0*/
 .shop-id {
   margin: 15px 0 10px;
 }
@@ -1610,11 +1703,11 @@ iframe[name='google_conversion_frame'] {
     }
   }
 }
-/*æŽ¨èå¯¼è´­*/
+/*0Š30—5¡§¨¨0‚30‚60Š20…40†4¨¨0…70…2*/
 .saleUser {
   margin-bottom: 20px;
 }
-/*å•†å“ä¿¡æ¯*/
+/*0Š26¦16¥90Š2¡°010Š10†70„30Š3010…4*/
 .taocan-list {
   li {
     position: relative;
@@ -2424,7 +2517,7 @@ iframe[name='google_conversion_frame'] {
   display: inline-block;
   *float: left;
 }
-/*åˆ†æœŸä»˜æ¬¾è®¡ç®—å™¨æ ·å¼*/
+/*0Š20·36¥90Š30“40—00Š10†30¹00Š30…10†6¨¨0…30„30Š40…3¡ª0Š26¾4¡§0Š30„2¡¤0Š20†4*/
 .fenqifuBox {
   background: #fff;
   border: 6px solid #767576;
@@ -2442,7 +2535,7 @@ iframe[name='google_conversion_frame'] {
 }
 FujiaDetailShow {
   .cal_container {
-    font: 500 12px/24px "å®‹ä½“";
+    font: 500 12px/24px "0Š20…36§80Š10†5¡°";
     margin: 0 auto;
     padding-left: 48px;
   }
@@ -2475,9 +2568,9 @@ FujiaDetailShow {
 }
 .cal_now, .cal_reset {
   color: #1b4b5f;
-  font: 700 12px/24px "å®‹ä½“";
-  font: 700 12px/24px "å®‹ä½“";
-  *font: 700 12px/20px "å®‹ä½“";
+  font: 700 12px/24px "0Š20…36§80Š10†5¡°";
+  font: 700 12px/24px "0Š20…36§80Š10†5¡°";
+  *font: 700 12px/20px "0Š20…36§80Š10†5¡°";
   height: 24px;
   margin-right: 10px;
   padding: 0 5px;
@@ -2487,7 +2580,7 @@ FujiaDetailShow {
   margin-left: 12px;
 }
 .cal_money {
-  font: 700 16px/24px "å¾®è½¯é›…é»‘", "é»‘ä½“";
+  font: 700 16px/24px "0Š20†60…3¨¨0†50…4¨¦6§9¡­¨¦0†3¡®", "¨¦0†3¡®0Š10†5¡°";
   position: relative;
   top: 2px;
 }
@@ -2768,8 +2861,7 @@ FujiaDetailShow {
         left: 50%;
         margin-left: -5px;
         bottom: -4px;
-        display  comment__-19: 19;
-        : none\9;
+        display: none;
         width: 0;
         height: 0;
         border-top: 10px solid #e12e2e;
@@ -2788,7 +2880,7 @@ FujiaDetailShow {
     }
   }
 }
-/*æ™®æƒ åˆ†æœŸ*/
+/*0Š36¾40…30Š30™60„20Š20·36¥90Š30“40—0*/
 .puhui {
   display: none;
 }
@@ -2937,7 +3029,7 @@ a {
     }
   }
 }
-/*é¢„çº¦åˆ°åº—*/
+/*¨¦0„46¥70Š40†20„70Š20·3¡ã0Š20†2¡ª*/
 .buy-in-shop {
   font-family: 'Microsoft YaHei UI';
   display: none;
@@ -3028,7 +3120,7 @@ a {
     cursor: pointer;
   }
 }
-/*é¢„çº¦å¼¹å‡ºå±‚æ ·å¼ä¿®æ”¹*/
+/*¨¦0„46¥70Š40†20„70Š20†40†10Š26¦00†20Š2¡À6¥50Š30„2¡¤0Š20†40‚50Š10†70…30Š3¡±*/
 #jiangjiatz.jjtz-new, .new-yygm-box, #new-yygm-prop {
   padding: 0;
   border: 0;
@@ -3159,7 +3251,7 @@ a {
     margin: 0;
   }
 }
-/*å•†å“å³ä¾§ä¿¡æ¯*/
+/*0Š26¦16¥90Š2¡°010Š20‚50…60Š10†6¡ì0Š10†70„30Š3010…4*/
 .shopinfo-sever {
   width: 168px;
 }
@@ -3414,7 +3506,7 @@ a {
     margin-right: 10px;
   }
 }
-/*æ”¯æŒæœåŠ¡*/
+/*0Š3¡±0…40Š30“3010Š30“40‚30Š20”70„3*/
 .zhichifuwBox {
   background: #fff;
   border: 1px solid #ddd;
@@ -3447,7 +3539,7 @@ a {
     }
   }
 }
-/*ç»„åˆè´­ä¹°*/
+/*0Š40†36¥70Š20‚60·3¨¨0…70…20Š10†1¡ã*/
 .zuhe {
   width: 1200px;
   margin: 10px auto 0;
@@ -3796,7 +3888,7 @@ a {
     }
   }
 }
-/*å•†å“è¯¦æƒ…*/
+/*0Š26¦16¥90Š2¡°01¨¨0…40„70Š30™6¡­*/
 .news-sub-left {
   float: left;
   width: 220px;
@@ -3996,7 +4088,7 @@ a {
     padding: 2px 5px;
   }
 }
-/*å•†å“å‚æ•°*/
+/*0Š26¦16¥90Š2¡°010Š20‚56¥50Š36¦1¡ã*/
 .dd_box {
   border: 1px solid #dbdbdb;
   border-top: 0px;
@@ -4119,7 +4211,7 @@ a {
     }
   }
 }
-/*ä½¿ç”¨å¿ƒå¾—*/
+/*0Š10†50†70Š4¡±¡§0Š20†70™60Š20†6¡ª*/
 .sppinglun {
   font-family: Arial;
 }
@@ -4282,7 +4374,7 @@ a {
     }
   }
 }
-/*è¯„ä»·*/
+/*¨¨0…46¥70Š10†3¡¤*/
 .sppjbd {
   border: 0;
   margin-top: 15px;
@@ -4397,7 +4489,7 @@ a {
 .sppjbd .pltj_btn:hover, .sppjbd .add_tag_btn:hover {
   text-decoration: none;
 }
-/*å’¨è¯¢è¯„è®ºåˆ—è¡¨*/
+/*0Š2¡¯¡§¨¨0…40„4¨¨0…46¥7¨¨0…30†20Š20·3¡ª¨¨0„3¡§*/
 .y_pj_pjbox {
   padding: 10px;
   position: relative;
@@ -4588,7 +4680,7 @@ a {
   display: block;
   text-align: center;
 }
-/*åˆ†é¡µ*/
+/*0Š20·36¥9¨¦0„30…8*/
 .nextpages {
   height: 45px;
   text-align: right;
@@ -4644,7 +4736,7 @@ a {
     }
   }
 }
-/*å•†å“å’¨è¯¢*/
+/*0Š26¦16¥90Š2¡°010Š2¡¯¡§¨¨0…40„4*/
 .pl_search {
   height: 160px;
   border: 1px solid #dbdbdb;
@@ -4860,8 +4952,8 @@ a {
     font-size: 12px;
   }
 }
-/*æµå¤±ç»Ÿè®¡*/
-/*ç”µè¯æ³¨å†Œ*/
+/*0Š30…8010Š2¡è¡À0Š40†30—0¨¨0…30„3*/
+/*0Š4¡±0…8¨¨0…40ƒ90Š30…6¡§0Š26¥90“3*/
 .register-member {
   font-size: 14px;
   display: none;
@@ -4914,7 +5006,7 @@ a {
     width: 164px;
   }
 }
-/*å¥—é¤æ ·å¼*/
+/*0Š20„6¡ª¨¦¡è0‚60Š30„2¡¤0Š20†40‚5*/
 .taocan-detail-tip {
   min-width: 300px;
   color: #e12e2e;
@@ -4923,7 +5015,7 @@ a {
   line-height: 30px;
   margin-bottom: 5px;
 }
-/*æ‰‹æœºè¯„æµ‹css*/
+/*0Š3¡ë6§80Š30“40†2¨¨0…46¥70Š30…86§8css*/
 .top-img {
   img {
     display: block;
@@ -5063,7 +5155,7 @@ a {
   padding: 20px 0;
   font-size: 14px;
 }
-/* é¢„çº¦è´­ä¹° */
+/* ¨¦0„46¥70Š40†20„7¨¨0…70…20Š10†1¡ã */
 .bespeak-wrapper {
   height: 34px;
   line-height: 34px;
@@ -5106,7 +5198,7 @@ a {
   vertical-align: -4%;
   background: url('../images/goods/icon-bespeak-person.png') no-repeat center;
 }
-/* ä¼ä¸šé‡‡è´­å…¥å£ */
+/* 0Š10†4010Š10†00”8¨¦6¦06¦0¨¨0…70…20Š2¡­0„60Š20‚50„5 */
 .procurement-row {
   line-height: 31px;
   height: 31px;
@@ -5127,7 +5219,7 @@ a {
     color: #7597dc;
   }
 }
-/* ç­›é€‰æ–¹å¼ä¼˜åŒ– */
+/* 0Š40…26§9¨¦¡ë0Š3¨C0†10Š20†40‚50Š10†40¹00Š20“3 */
 .search-brand,.sx_brand {
   padding-top: 7px;
   margin-left: 95px !important;
@@ -5198,7 +5290,7 @@ a {
 .sx_brand >a:hover img,.sx_brand >a.cur img,.search-brand >a:hover img,.search-brand >a.cur img {
   display: none;
 }
-/* ä¸‹è½½APPç«‹å‡ */
+/* 0Š10†06§8¨¨0†50†5APP0Š40…06§80Š26¦00‚5 */
 .app-minus {
   display: inline-block;
   height: 18px;
@@ -5240,7 +5332,7 @@ a {
     }
   }
 }
-/*ä¹æœºæœåŠ¡*/
+/*0Š10†10ƒ90Š30“40†20Š30“40‚30Š20”70„3*/
 .jiuji-service-view {
   padding: 20px 35px;
   line-height: 30px;
