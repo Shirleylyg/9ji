@@ -1,5 +1,5 @@
 require(['config'],function(){
-    require(['jquery','common','liliZoom'],function($,com){
+    require(['jquery','common','imgZoom'],function($,com){
         
 
         // 获得列表传过的参数
@@ -18,8 +18,8 @@ require(['config'],function(){
                 $('#spprice').html(res[0].price);
                 $('.lowprice dd a:nth-child(1)').html('一手优品：￥'+(res[0].price-200));
                 $('.lowprice dd a:nth-child(2)').html('二手良品：￥'+(res[0].price-700));
-                $('.bigpic a img').attr('src',res[0].imgurl);
-                $('.smallpic li:nth-child(1) img').attr('src',res[0].imgurl);
+                $('.bigpic a img').attr({src:res[0].imgurl,rel:res[0].imgurl});
+                $('.smallpic li:nth-child(1) img').attr({src:res[0].imgurl,big:res[0].imgurl,mid:res[0].imgurl,sig:res[0].imgurl});
                 $('.choose_color li img').attr('src',res[0].imgurl);
                 $('.choose_color li span').html(res[0].color);
 
@@ -102,19 +102,18 @@ require(['config'],function(){
                 com.cartCookie();
             });
         })
-
-        // 放大镜
-        /*$(".jqzoom").imagezoom();
-        $('.smallpic').on('click','li img',function(){
-            $(this).closest('li').addClass('smpichover').siblings().removeClass('smpichover');
-            $('.bigpic img').attr({
-                'src':this.src,
-                'data-big':$(this).attr('data-big') || this.src
-            })
-        })*/
-
+        // 购物车
         com.cartCookie();
         com.toolCart();
+
+        // 放大镜
+        $(".jqzoom").imagezoom();
+
+        $("#smallpic li a").click(function(){
+            $(this).parents("li").addClass("smpichover").siblings().removeClass("smpichover");
+            $(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+            $(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+        });
 
     })
 })

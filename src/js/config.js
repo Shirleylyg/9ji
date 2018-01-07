@@ -5,12 +5,12 @@ require.config({
         
         'slide':'../lib/jquery-silde/slide',
         
-        'liliZoom':'../lib/jquery-liliZoom/jquery.liliZoom'
+        'imgZoom':'../lib/jquery-imgZoom/jquery.imgZoom'
     },
     shim:{
         // 设置依赖
         slide:['jquery'],
-        liliZoom:['jquery'],
+        imgZoom:['jquery'],
         common:['jquery']
     }
 
